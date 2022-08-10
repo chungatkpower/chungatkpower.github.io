@@ -1,0 +1,137 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: 'Mukta', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(135deg, #fc466b, #3f5efb);
+}
+
+
+.coin {
+    display: flex;
+    width: 330px;
+    height: 60px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.coin .coin-logo {
+    width: 20%;
+    height: 100%;
+    display: grid;
+    place-items:center;
+
+}
+
+.coin .coin-logo img {
+    width: 70%;
+    height: 70%;
+}
+
+.coin .coin-name {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+   
+}
+
+.coin .coin-name h3 {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.coin .coin-name span {
+    font-size: 9px;
+    font-weight: 500;
+    margin:6px 0 0 2px;
+}
+
+.coin .coin-price {
+    display: grid;
+    align-items: center;
+    margin-left: auto;
+    padding: 8px 22px 0 0;
+    text-align: right;
+}
+
+.coin .coin-price .price {
+    color:#30ff20;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: -6px;
+}
+
+.coin .coin-price .change {
+    color: #aaa;
+    font-size: 13px;
+    font-weight: 500;
+    margin-top:-20px;
+}
+
+.coin.rising {
+    background: white;
+
+}
+
+.coin.rising .coin-price .price {
+    color:#30ff20;
+}
+
+.coin.falling {
+    background: white;
+}
+
+.coin.falling .coin-price .price {
+    color:#ff4040;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+}
+
+.footer-icon {
+    text-align: center;
+}
+
+.color-icon {
+    color:rgb(225, 227, 228);
+    font-family: helvetica,sans-serif;
+    font-weight: 400;
+}
+.header {
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    display: flex;
+    box-shadow: 0 2px;
+}
+
+.header-name {
+    position: relative;
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:auto;
+    font-size: 21px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.6);
+}
+.menu {
+    position: absolute;
+    top: 14px;
+    right: 8px;
+    font-size: 30px;
+    color: white;
+}
