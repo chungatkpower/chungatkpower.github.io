@@ -4,25 +4,35 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bcolor:white;
+}
+
 body {
+    display: flex;
+    justify-content: center;
     position: relative;
     font-family: 'Mukta', sans-serif;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: linear-gradient(135deg, #fc466b, #3f5efb);
+    background:#3333;
 }
 
+
+.container {
+    position: absolute;
+    bottom: 96px;
+    width: auto;
+}
 
 .coin {
     display: flex;
     width: 330px;
-    height: 60px;
-    background-color: white;
-    border-radius: 5px;
+    height: 43px;
+    opacity: 0.9;
+    border-radius: 12px;
     margin: 10px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    background: var(--bcolor);
+    box-shadow: 3px 4px 5px 2px rgb(181, 179, 179);
 }
 
 .coin .coin-logo {
@@ -34,12 +44,12 @@ body {
 }
 
 .coin .coin-logo img {
-    width: 70%;
+    width: 48%;
     height: 70%;
 }
 
 .coin .coin-name {
-    height: 100%;
+    height: 120%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -47,7 +57,7 @@ body {
 }
 
 .coin .coin-name h3 {
-    font-size: 18px;
+    font-size: 17px;
     text-transform: uppercase;
 }
 
@@ -66,30 +76,30 @@ body {
 }
 
 .coin .coin-price .price {
-    color:#30ff20;
-    font-size: 18px;
+    color:#46F953;
+    font-size: 16px;
     font-weight: 700;
     margin-top: -6px;
 }
 
 .coin .coin-price .change {
     color: #aaa;
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 500;
-    margin-top:-20px;
+    margin-top:-6px;
 }
 
 .coin.rising {
-    background: white;
+    background: var(--bcolor);
 
 }
 
 .coin.rising .coin-price .price {
-    color:#30ff20;
+    color:#46F953;
 }
 
 .coin.falling {
-    background: white;
+    background: var(--bcolor);
 }
 
 .coin.falling .coin-price .price {
@@ -97,24 +107,39 @@ body {
 }
 
 .footer {
+    width: 100%;
     position: absolute;
-    bottom: 0;
+    bottom: 15px;
 }
 
 .footer-icon {
     text-align: center;
 }
 
+.footer-icon p {
+    text-align: center;
+}
+
 .color-icon {
-    color:rgb(225, 227, 228);
+    color:rgb(98, 96, 96);
     font-family: helvetica,sans-serif;
     font-weight: 400;
+    
+}
+
+.footer-icon a{
+    text-decoration: none;
+}
+.text--i {
+    font-style: italic;
+    letter-spacing: 3px;
+    font-size: 11px;
 }
 .header {
     position: absolute;
-    top:0;
+    top:0px;
     width: 100%;
-    height: 60px;
+    height: 45px;
     background-color: black;
     display: flex;
     box-shadow: 0 2px;
@@ -127,11 +152,127 @@ body {
     margin:auto;
     font-size: 21px;
     box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.6);
+    letter-spacing: 8px;
 }
-.menu {
+
+
+.slide {
     position: absolute;
-    top: 14px;
-    right: 8px;
-    font-size: 30px;
-    color: white;
+    top: 23px;
+    margin: 0 auto;
+    width: 470px;
+    height: 277px;
+}
+
+.h-95 {
+    height: 95%;
+}
+
+.footer {
+    display: none;
+}
+
+@media screen and (max-width: 415px){
+
+    .coin {
+        width: 369px;
+        height: 60px;
+    }
+
+    .coin .coin-logo {
+        width: 25%;
+    }
+
+    .container {
+        position: absolute;
+        bottom: 145px;
+    }
+    .slide {
+        width: 100%;
+        height: 236px;
+    }
+
+    .footer {
+        background:#333;
+        display: flex !important;
+        position: absolute;
+        bottom: 0;
+        border-radius: 10px;
+        
+    }
+
+    .footer-element {
+        text-decoration: none;
+        font-size: 18px;
+        color: white;
+        border-right: 1px solid white;
+        text-align: center;
+        font-family: 'Raleway', sans-serif;
+        width: 20%;
+        margin: 3px 0px;
+        
+    }
+
+    .footer-element-icon {
+        display:block;
+    }
+
+    .footer-element-text {
+        display:block;
+        margin: 0;
+    }
+
+}
+
+@media screen and (max-width: 380px){
+    .container {
+        position: absolute;
+        bottom: 90px;
+    }
+
+    .coin {
+        height: 40px;
+        width: 326px;
+    }
+    .slide {
+        width: 100%;
+        height: 227px;
+    }
+
+    .footer {
+        background:#333;
+        display: flex !important;
+        position: absolute;
+        bottom: 0px;
+        border-radius: 10px;
+        
+    }
+
+    .footer-element {
+        text-decoration: none;
+        font-size: 16px;
+        color: white;
+        border-right: 1px solid white;
+        text-align: center;
+        font-family: 'Raleway', sans-serif;
+        width: 20%;
+        margin: 3px 0px;
+        
+    }
+
+    .footer-element-icon {
+        display:block;
+    }
+
+    .footer-element-text {
+        display:block;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 388px) and (max-width: 400px) {
+    .container {
+        position: absolute;
+        bottom: 110px;
+    }
 }
